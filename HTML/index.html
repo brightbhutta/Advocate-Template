@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Advocate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Styles -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="layerslider/css/layerslider.css" type="text/css">
+<link rel="stylesheet" href="css/icons.css">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/colors/color.css" title="color1" />
+</head>
+
+<body itemscope>
+<div class="theme-layout">
+<header>
+	<div class="topbar">
+		<div class="container">
+			<div class="header-info">
+				<ul>
+					<li><i class="fa fa-phone"></i><?php echo economic_set($options, 'phone'); ?> 1.800.123.4567</li>
+					<li><i class="fa fa-envelope"></i> info@yourdomain.com</li>
+					<li><i class="fa fa-map-marker"></i> Billgum 9876 Ameraica</li>
+				</ul>
+			</div><!-- Header Info -->
+			<div class="header-btn">
+				<a itemprop="url" href="#" title=""><i class="fa fa-anchor"></i> REQUEST A FREE CONSULTATION</a>
+			</div><!-- Request A Consultation -->
+		</div>
+	</div><!-- Top Bar -->
+	<div class="menu-bar">
+		<div class="container">
+			<div itemprop="logo" class="logo"><a itemprop="url" href="#" title=""><img itemprop="image" src="images/logo.png" alt="" /></a></div><!-- Logo -->
+			<nav>
+				<ul>
+					<?php wp_nav_menu( array( 'theme_location' => 'main_menu', 'container_id' => 'navbar-collapse-1',
+						'container_class'=>'navbar-collapse collapse navbar-right',
+						'menu_class'=>'nav navbar-nav',
+						'fallback_cb'=>false, 
+						'items_wrap' => '%3$s', 
+						'container'=>false,
+						'walker'=> new Bunch_Bootstrap_walker()  
+					) ); ?>
+				</ul>
+			</nav><!-- Navigation -->
+			<div class="header-search">
+				<span><i class="fa fa-search"></i></span>
+			</div>
+		</div>
+		<form class="header-search-form">
+			<div class="container">
+				<input type="text" placeholder="Search Here...">
+				<button><i class="fa fa-search"></i></button>
+			</div>
+		</form>
+	</div><!-- Menu Bar -->
+</header><!-- Header -->
+
+<div class="responsive-header">
+	<div class="topbar">
+		<div class="container">
+			<div class="header-info">
+				<ul>
+					<li><i class="fa fa-phone"></i> 1.800.123.4567</li>
+					<li><i class="fa fa-envelope"></i> info@yourdomain.com</li>
+					<li><i class="fa fa-map-marker"></i> Billgum 9876 Ameraica</li>
+				</ul>
+			</div><!-- Header Info -->
+			<div class="header-btn">
+				<a itemprop="url" href="#" title=""><i class="fa fa-anchor"></i> REQUEST A FREE CONSULTATION</a>
+			</div><!-- Request A Consultation -->
+			<form class="responsive-search"><input type="text" placeholder="Enter Your Search" /><button><i class="fa fa-search"></i></button></form>
+		</div>
+	</div><!-- Top Bar -->
+	<div class="responsive-menu">
+		<span class="show-topbar"><i class="fa fa-angle-double-down"></i></span>
+		<div itemprop="logo" class="logo"><a itemprop="url" href="#" title=""><img itemprop="image" src="images/logo.png" alt="" /></a></div>
+		<span class="open-menu"><i class="fa fa-align-justify"></i></span>
+		<div class="menu-links">
+			<ul>
+				<li class="menu-item-has-children"><a itemprop="url" href="#" title="">Home</a>
+					<ul>
+						<li><a itemprop="url" href="index.html" title="">Homepage 1</a></li>
+						<li><a itemprop="url" href="index2.html" title="">Homepage 2</a></li>
+						<li><a itemprop="url" href="index3.html" title="">Homepage 3</a></li>
+					</ul>
+				</li>
+				<li class="menu-item-has-children"><a itemprop="url" href="#" title="">Pages</a>
+					<ul>
+						<li class="menu-item-has-children"><a itemprop="url" href="awards.html" title="">Awards</a>
+							<ul>
+								<li><a itemprop="url" href="awards.html" title="">Awards 3 Columns</a></li>
+								<li><a itemprop="url" href="awards2.html" title="">Awards 4 Columns</a></li>
+								<li><a itemprop="url" href="awards-sidebar.html" title="">Awards With Sidebar</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children"><a itemprop="url" href="blog.html" title="">Blog Pages</a>
+							<ul>
+								<li><a itemprop="url" href="blog.html" title="">Blog List View</a></li>
+								<li><a itemprop="url" href="blog-grid.html" title="">Blog Grid View With Sidebar</a></li>
+								<li><a itemprop="url" href="blog-grid2.html" title="">Blog Grid View Without Sidebar</a></li>
+								<li><a itemprop="url" href="blog-grid3.html" title="">Blog Grid 4 Column</a></li>
+								<li><a itemprop="url" href="blog-single.html" title="">Blog Detail With Sidebar</a></li>
+								<li><a itemprop="url" href="blog-single2.html" title="">Blog Detail Without Sidebar</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children"><a itemprop="url" href="practice-areas.html" title="">Practice Pages</a>
+							<ul>
+								<li><a itemprop="url" href="practice-areas.html" title="">Practice Areas 4 Columns</a></li>
+								<li><a itemprop="url" href="practice-areas2.html" title="">Practice Areas 3 Columns</a></li>
+								<li><a itemprop="url" href="practice-areas3.html" title="">Practice Areas With Sidebar</a></li>
+								<li><a itemprop="url" href="practice-single.html" title="">Practice Single With Sidebar</a></li>
+								<li><a itemprop="url" href="practice-single2.html" title="">Practice Single Without Sidebar</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a itemprop="url" href="careers.html" title="">Careers</a></li>
+				<li><a itemprop="url" href="lawyer.html" title="">Lawyer</a></li>
+				<li><a itemprop="url" href="about.html" title="">About</a></li>
+				<li><a itemprop="url" href="contact.html" title="">Contact</a></li>
+			</ul>
+		</div>
+	</div><!-- Responsive Menu -->
+</div><!-- Responsive Header -->
+
+<section>
+	<div class="block gray no-padding">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div id="layerslider-container-fw">
+						<div id="layerslider" style="width: 100%; height: 570px; margin: 0px auto; ">		
+							<div class="ls-slide" data-ls="transition2d:10; timeshift:-1000; slidedelay: 4000;">	
+								<img itemprop="image" src="images/resource/slider1.jpg" class="ls-bg" alt="Slide background" />
+								<div class="ls-l slide-icon" style="top:150px; left:50%; font-size:20px; width:40px; height:40px; line-height:40px;" data-ls="offsetxin:-120;rotateyin:45;durationin:2000;delayin:1000;"><i class="fa fa-phone"></i></div>
+								<div class="ls-l slide-subtitle" style="top:210px; left:50%; font-size:22px; letter-spacing:3px;" data-ls="easingin:easeOutBack;fadein:true;scalexin:0.8;offsetyin:30;delayin:1400;"><span>(600)</span> 1224-5658</div>
+								<div class="ls-l slide-title" style="top:260px; left:50%; font-size:17px; letter-spacing:1px;padding:20px 50px;" data-ls="easingin:easeOutBack;fadein:true;scalexin:0.8;offsetyin:30;delayin:1600;">Lawyer Professional Case Results</div>
+								<a itemprop="url" href="#" title="" class="ls-l slide-btn" style="top:340px; left:50%; font-size:12px; letter-spacing:1px;padding:15px 30px;" data-ls="easingin:easeOutBack;fadein:true;scalexin:0.8;offsetyin:30;delayin:1800;">Free Consultation</a>
+							</div><!-- Slide1 -->
+
+	 						<div class="ls-slide" data-ls="transition2d:22; timeshift:-1000; slidedelay: 6000;">	
+								<img itemprop="image" src="images/resource/slider2.jpg" class="ls-bg" alt="Slide background" />
+								<div class="ls-l slide-title2" style="top:180px; left:0; font-size:20px; padding:15px 30px;" data-ls="offsetxin:0;offsetyin:top;durationin:5000;delayin:2500;easingin:easeOutElastic;fadein:false;fadeout:false;">When An Unknown Printer Took </div>
+								<div class="ls-l slide-title" style="top:240px; left:0; font-size:15px; letter-spacing:1px;padding:15px 40px;" data-ls="easingin:easeOutBack;scalexin:1.2;offsetyin:20;delayin:1600;">Lawyer Professional Case Results</div>
+								<div class="ls-l slide-phone" style="top:320px; left:0; font-size:16px; letter-spacing:1px;" data-ls="easingin:easeOutBack;scalexin:1.2;offsetyin:20;delayin:1800;"><i class="fa fa-phone"></i> +7(764) 675-8773</div>
+								<a itemprop="url" href="#" title="" class="ls-l slide-btn2" style="top:370px; left:0; font-size:12px; letter-spacing:1px;padding:15px 30px;" data-ls="easingin:easeOutBack;scalexin:1.2;offsetyin:20;delayin:2200;">Free Consultation</a>
+							</div><!-- Slide2 --> 
+
+	 						<div class="ls-slide" data-ls="transition2d:34; timeshift:-1000; slidedelay: 6000;">	
+								<img itemprop="image" src="images/resource/slider3.jpg" class="ls-bg" alt="Slide background" />
+								<div class="ls-l slide-title3" style="top:200px; left:600px; font-size:26px; line-height:36px; letter-spacing:3px;" data-ls="easingin:easeOutBack;fadein:true;scalexin:1.2;offsetxout:left;delayin:1600;">Welcome To Law Firm Legal <br/> Help 24/7 </div>
+								<div class="ls-l slide-phone with-bg" style="top:290px; left:600px; font-size:16px; letter-spacing:1px;padding:10px 30px;" data-ls="easingin:easeOutBack;fadein:true;scalexin:1.2;offsetxout:left;delayin:1800;"><i class="fa fa-phone"></i> +7(764) 675-8773</div>
+								<div class="ls-l slide-subtitle2" style="top:360px; left:600px; font-size:18px; padding:10px 40px;" data-ls="easingin:easeOutBack;fadein:true;scalexin:1.2;offsetxout:left;delayin:2500;">Lawyer Professional Case Results</div>
+
+							</div><!-- Slide3 -->
+						</div>
+					</div><!-- Layer Slider -->	
+				</div>	
+			</div>
+		</div>
+	</div>
+</section><!-- Slider Section -->
+
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div class="all-services">
+						<h2>Welcome To Law Firm Legal Help 24/7 </h2>
+						<p itemprop="description">Nunc orci ipsum, pellentesque a tristique et, mattis non arcu. Sed aliquet gravida aliquet. Donec gravida, nisl at pretium lobortis, lectus libero aliquam felis, eu cursus lorem nulla vitae nunc.</p>
+						<div class="service-grids">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="service">
+										<span><i class="fa fa-phone"></i></span>
+										<h4>LEGAL HELP</h4>
+										<p itemprop="description">Nunc orci ipsum, pellentesque a tristique et, mattis non arcu. </p>
+									</div><!-- Services -->
+								</div>
+								<div class="col-md-3">
+									<div class="service">
+										<span><img itemprop="image" src="images/resource/service1.png" alt="" /></span>
+										<h4>Fiscal Advising</h4>
+										<p itemprop="description">Nunc orci ipsum, pellentesque a tristique et, mattis non arcu. </p>
+									</div><!-- Services -->
+								</div>
+								<div class="col-md-3">
+									<div class="service">
+										<span><img itemprop="image" src="images/resource/service2.png" alt="" /></span>
+										<h4>Qualified Protection</h4>
+										<p itemprop="description">Nunc orci ipsum, pellentesque a tristique et, mattis non arcu. </p>
+									</div><!-- Services -->
+								</div>
+								<div class="col-md-3">
+									<div class="service">
+										<span><i class="fa fa-joomla"></i></span>
+										<h4>Financial Advising</h4>
+										<p itemprop="description">Nunc orci ipsum, pellentesque a tristique et, mattis non arcu. </p>
+									</div><!-- Services -->
+								</div>
+							</div>
+						</div><!-- Service Grids -->						
+					</div><!-- All Services -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Services Section -->
+
+<section>
+	<div class="block">
+	<div data-velocity="-.2" style="background: url(images/resource/parallax2.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->				
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 column">
+					<div class="reviews">
+						<ul role="tablist" class="nav nav-tabs" id="myTab">
+							<li class="active"><a itemprop="url" data-toggle="tab" href="#review1"><img itemprop="image" src="images/resource/review-thumb1.jpg" alt="" /></a></li>
+							<li><a itemprop="url" data-toggle="tab" href="#review2"><img itemprop="image" src="images/resource/review-thumb2.jpg" alt="" /></a></li>
+							<li><a itemprop="url" data-toggle="tab" href="#review3"><img itemprop="image" src="images/resource/review-thumb3.jpg" alt="" /></a></li>
+						</ul><!-- Review Selectors -->					
+						<div class="tab-content" id="myTabContent">
+							<div id="review1" class="tab-pane fade in active">
+								<div class="review-detail">
+									<strong>Lawyer Professional Professional Liability Insurance</strong>
+									<p itemprop="description">The origins of our Firm can be traced back to Robertson & Partners, a law firm in Washington, D.C., started shortly after the Civil War by Robert Robertson. Throughout the years, our firm has evolved.</p>
+									<a itemprop="url" class="theme-btn" href="#" title="">Know More</a>
+								</div><!-- Review Detail -->
+							</div>
+							<div id="review2" class="tab-pane fade">
+								<div class="review-detail">
+									<strong>Welcome To Law Firm Legal Help 24/7 </strong>
+									<p itemprop="description">The origins of our Firm can be traced back to Robertson & Partners, a law firm in Washington, D.C., started shortly after the Civil War by Robert Robertson.The origins of our Firm can be traced back to Robertson & Partners, a law firm in Washington, D.C., started shortly after the Civil War by Robert Robertson. Throughout the years, our firm has evolved.</p>
+									<a itemprop="url" class="theme-btn" href="#" title="">Know More</a>
+								</div><!-- Review Detail -->
+							</div>
+							<div id="review3" class="tab-pane fade">
+								<div class="review-detail">
+									<strong>Sexual Assault on College Campuses. Laws & Compensations</strong>
+									<p itemprop="description">A law firm in Washington, D.C., started shortly after the Civil War by Robert Robertson.The origins of our Firm can be traced back to Robertson & Partners, a law firm in Washington, D.C., started shortly after the Civil War by Robert Robertson. Throughout the years, our firm has evolved.</p>
+									<a itemprop="url" class="theme-btn" href="#" title="">Know More</a>
+								</div><!-- Review Detail -->
+							</div>
+						</div>						
+					</div><!-- Reviews -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Reviews Section -->
+
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div class="badge-title">
+						<i class="fa fa-gavel"></i>
+						<h2>Fun Facts</h2>
+						<span>DISCOVER</span>
+					</div>
+					<div class="fun-facts">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="counter">
+									<strong>3589</strong>
+									<span>Solved Cases</span>
+								</div><!-- Counter  -->
+							</div>
+							<div class="col-md-3">
+								<div class="counter">
+									<strong>4261</strong>
+									<span>Brain Injury</span>
+								</div><!-- Counter  -->
+							</div>
+							<div class="col-md-3">
+								<div class="counter">
+									<strong>3589</strong>
+									<span>Solved Cases</span>
+								</div><!-- Counter  -->
+							</div>
+							<div class="col-md-3">
+								<div class="counter">
+									<strong>3589</strong>
+									<span>Solved Cases</span>
+								</div><!-- Counter  -->
+							</div>
+						</div>
+					</div><!-- Fun Facts  -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Fun Factors Section -->
+
+
+<section>
+	<div class="block remove-bottom blackish">
+	<div data-velocity="-.2" style="background: url(images/resource/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->				
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div class="parallax-title2">
+						<h2>OUR ATTORNEY</h2>
+						<span>Our results speak for</span>
+					</div>
+					<div class="white-boxed">
+						<div class="attornies">
+							<div class="attorney">
+								<h4><a itemprop="url" href="#" title="">Roger Mclernon, <i>LLB</i> </a></h4>
+								<span>Senior Partner</span>
+								<div class="attorney-img">
+									<img itemprop="image" src="images/resource/attorney.jpg" alt="" />
+									<a itemprop="url" href="#" title="">SEND A MESSAGE</a>
+								</div>
+							</div><!-- Attorney -->
+							<div class="attorney">
+								<h4><a itemprop="url" href="#" title="">Ciran Moynahk, <i>LLB  MSSc </i> </a></h4>
+								<span>Senior Partner</span>
+								<div class="attorney-img">
+									<img itemprop="image" src="images/resource/attorney2.jpg" alt="" />
+									<a itemprop="url" href="#" title="">SEND A MESSAGE</a>
+								</div>
+							</div><!-- Attorney -->
+							<div class="attorney">
+								<h4><a itemprop="url" href="#" title="">Roger Mclernon, <i>LLB</i> </a></h4>
+								<span>Senior Partner</span>
+								<div class="attorney-img">
+									<img itemprop="image" src="images/resource/attorney.jpg" alt="" />
+									<a itemprop="url" href="#" title="">SEND A MESSAGE</a>
+								</div>
+							</div><!-- Attorney -->
+							<div class="attorney">
+								<h4><a itemprop="url" href="#" title="">Ciran Moynahk, <i>LLB  MSSc </i> </a></h4>
+								<span>Senior Partner</span>
+								<div class="attorney-img">
+									<img itemprop="image" src="images/resource/attorney2.jpg" alt="" />
+									<a itemprop="url" href="#" title="">SEND A MESSAGE</a>
+								</div>
+							</div><!-- Attorney -->
+						</div><!-- Attornies -->
+					</div><!-- White Boxed -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Our Attornies -->
+
+
+<section>
+	<div class="block gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 column">
+					<div class="side-title">
+						<h2>WHY US?</h2>
+						<span>Maecenas bibendum </span>
+					</div>
+					<div class="toggle">
+						<div class="toggle-item">
+							<h2> Professional Website</h2>
+							<div class="content">
+								<div class="row">
+									<div class="col-md-12">	
+										<img itemprop="image" src="images/resource/toggle-thumb.jpg" alt="" />
+										<p itemprop="description">Maecenas bibendum lacus gravida placerat consequat. Vivamus quis hendrerit itudin.consequat. Vivamus quis hendrerit rat consequat. Vivamus quis hen itudin.</p>
+									</div>
+								</div>
+							</div><!-- Content -->
+						</div><!-- Toggle Item -->
+						<div class="toggle-item">
+							<h2>Campuses  &  Compensations</h2>
+							<div class="content">
+								<div class="row">
+									<div class="col-md-12">
+										<p itemprop="description">Maecenas bibendum lacus gravida placerat consequat. Vivamus quis hendrerit itudin.consequat. Vivamus quis hendrerit rat consequat. Vivamus quis hen itudin.</p>
+									</div>
+								</div>
+							</div><!-- Content -->
+						</div><!-- Toggle Item -->
+						<div class="toggle-item">
+							<h2>Car Accident Injuries</h2>
+							<div class="content">
+								<div class="row">
+									<div class="col-md-12">
+										<p itemprop="description">Maecenas bibendum lacus gravida placerat consequat. Vivamus quis hendrerit itudin.consequat. Vivamus quis hendrerit rat consequat. Vivamus quis hen itudin.</p>
+									</div>
+								</div>
+							</div><!-- Content -->
+						</div><!-- Toggle Item -->
+						<div class="toggle-item">
+							<h2>Your Personal Injury Case</h2>
+							<div class="content">
+								<div class="row">
+									<div class="col-md-12">
+										<p itemprop="description">Maecenas bibendum lacus gravida placerat consequat. Vivamus quis hendrerit itudin.consequat. Vivamus quis hendrerit rat consequat. Vivamus quis hen itudin.</p>
+									</div>
+								</div>
+							</div><!-- Content -->
+						</div><!-- Toggle Item -->
+					</div><!-- Toggle -->									
+				</div>
+				<div class="col-md-4 column">
+					<div class="side-title">
+						<h2>ADVANTAGES</h2>
+						<span>Maecenas bibendum lacus</span>
+					</div>
+					<div class="theme-tabs">
+						<ul class="nav nav-tabs" id="myTab2">
+							<li class="active"><a itemprop="url" data-toggle="tab" href="#tab1"><i class="fa fa-anchor"></i> LAW</a></li>
+							<li><a itemprop="url" data-toggle="tab" href="#tab2"><i class="fa fa-anchor"></i> ADVOCATE</a></li>
+							<li><a itemprop="url" data-toggle="tab" href="#tab3"><i class="fa fa-anchor"></i> JUDGE</a></li>
+						</ul><!-- Tab Selectors -->
+						<div class="tab-content" id="myTabContent2">
+							<div id="tab1" class="tab-pane fade in active">
+								<div class="tab-img"><img itemprop="image" src="images/resource/tab1.jpg" alt="" /></div>
+								<p itemprop="description">Sexual Assault on College Campuses. Laws & Compensations</p>
+								<ul>
+									<li>Health and Economic Impacts </li>
+									<li>Permanent Impairment </li>
+									<li>We Will Help You Build Strong Online</li>
+								</ul>
+							</div><!-- Tab 1 Content -->
+							<div id="tab2" class="tab-pane fade">
+								<div class="tab-img"><img itemprop="image" src="images/resource/tab2.jpg" alt="" /></div>
+								<p itemprop="description">Sexual Assault on College Campuses. Laws & Compensations</p>
+								<ul>
+									<li>Health and Economic Impacts </li>
+									<li>Permanent Impairment </li>
+									<li>We Will Help You Build Strong Online</li>
+								</ul>
+							</div><!-- Tab 2 Content -->
+							<div id="tab3" class="tab-pane fade">
+								<div class="tab-img"><img itemprop="image" src="images/resource/tab3.jpg" alt="" /></div>
+								<p itemprop="description">Sexual Assault on College Campuses. Laws & Compensations</p>
+								<ul>
+									<li>Health and Economic Impacts </li>
+									<li>Permanent Impairment </li>
+									<li>We Will Help You Build Strong Online</li>
+								</ul>
+							</div><!-- Tab 3 Content -->
+						</div>
+					</div><!-- Theme Tabs -->
+				</div>
+				<div class="col-md-4 column">
+					<div class="side-title">
+						<h2>HAPPY CLIENTS</h2>
+						<span>Maecenas bibendum lacus </span>
+					</div>
+					<div class="testimonials-carousel">
+						<div class="testimonial">
+							<strong>Rodney Stratton</strong>
+							<div class="rating-detailed">
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--off"><i class="fa fa-star"></i></span>
+							</div><!-- Rating -->
+							<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem Mirum est notare quam littera gothica, Claritas est etiam processus dynamicus, qui sequitur mutationem </p>
+							<img itemprop="image" src="images/resource/testimonial-thumb1.jpg" alt="" />
+						</div><!-- Testimonial -->
+						<div class="testimonial">
+							<strong>Max Poramo</strong>
+							<div class="rating-detailed">
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--off"><i class="fa fa-star"></i></span>
+							</div><!-- Rating -->
+							<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem Mirum est notare quam littera gothica, Claritas est etiam processus dynamicus, qui sequitur mutationem </p>
+							<img itemprop="image" src="images/resource/testimonial-thumb2.jpg" alt="" />
+						</div><!-- Testimonial -->
+						<div class="testimonial">
+							<strong>Tino Solata</strong>
+							<div class="rating-detailed">
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--on"><i class="fa fa-star"></i></span>
+								<span class="star--off"><i class="fa fa-star"></i></span>
+							</div><!-- Rating -->
+							<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem. Claritas est etiam processus dynamicus, qui sequitur mutationem Mirum est notare quam littera gothica.</p>
+							<img itemprop="image" src="images/resource/testimonial-thumb3.jpg" alt="" />
+						</div><!-- Testimonial -->
+					</div><!-- Testimonial Carousel -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Toggle, Tabs & Testimonials -->
+
+
+<section>
+	<div class="block no-padding">
+	<div data-velocity="-.2" style="background: url(images/resource/parallax4.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->				
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-6 col-md-6 half-box column">
+					<div class="side-title">	
+						<h2>GET FREE CONSULTATION!</h2>
+						<span>Maecenas bibendum lacus</span>
+					</div>
+					<div></div>
+					<form class="contact-form" method="post" action="contact.php" name="contactform">
+						<div class="row">
+							<div class="col-md-12"><i class="fa fa-user"></i><input name="name" type="text" placeholder="Name" /></div>
+							<div class="col-md-12"><i class="fa fa-envelope"></i><input name="email" type="text" placeholder="Email" /></div>
+							<div class="col-md-12"><textarea name="comments" placeholder="Message"></textarea></div>
+							<div class="col-md-12"><button type="submit" id="submit3" class="submit theme-btn">SEND TO LAWYER</button></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Contact Form Section -->
+
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div class="badge-title">
+						<h2>Latest News</h2>
+						<span>DISCOVER</span>
+					</div>
+
+					<div class="row">
+						<div class="latest-news masonary">
+							<div class="col-md-4">
+								<div class="news" itemscope itemtype="http://schema.org/BlogPosting">
+									<div class="news-bar">
+										<span content="SEPTEMBER 23, 2013" itemprop="datePublished">SEPTEMBER 23, 2013</span>
+										<strong>2 <i class="fa fa-comments"></i></strong>
+									</div>
+									<img itemprop="image" src="images/resource/news2.jpg" alt="" />
+									<span><strong>POSTED IN:</strong> <a itemprop="url" href="#" title="">LEGAL</a><a itemprop="url" href="#" title="">ADVICE</a></span>
+									<h3 itemprop="headline"><a itemprop="url" href="blog-single.html" title="">This is war, and in War The Only Crime is to lose.</a></h3>
+									<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Claritas est etiam processus.</p>
+								</div><!-- News -->
+							</div>
+							<div class="col-md-4">
+								<div class="news" itemscope itemtype="http://schema.org/BlogPosting">
+									<div class="news-bar">
+										<span content="SEPTEMBER 23, 2013" itemprop="datePublished">SEPTEMBER 23, 2013</span>
+										<strong>2 <i class="fa fa-comments"></i></strong>
+									</div>
+									<img itemprop="image" src="images/resource/news3.jpg" alt="" />
+									<span><strong>POSTED IN:</strong> <a itemprop="url" href="#" title="">LEGAL</a><a itemprop="url" href="#" title="">ADVICE</a></span>
+									<h3 itemprop="headline"><a itemprop="url" href="blog-single.html" title="">This is war, and in War The Only Crime is to lose.</a></h3>
+									<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Claritas est etiam processus.</p>
+								</div><!-- News -->
+							</div>
+							<div class="col-md-4">
+								<div class="news" itemscope itemtype="http://schema.org/BlogPosting">
+									<div class="news-bar">
+										<span content="SEPTEMBER 23, 2013" itemprop="datePublished">SEPTEMBER 23, 2013</span>
+										<strong>2 <i class="fa fa-comments"></i></strong>
+									</div>
+									<img itemprop="image" src="images/resource/news1.jpg" alt="" />
+									<span><strong>POSTED IN:</strong> <a itemprop="url" href="#" title="">LEGAL</a><a itemprop="url" href="#" title="">ADVICE</a></span>
+									<h3 itemprop="headline"><a itemprop="url" href="blog-single.html" title="">This is war, and in War The Only Crime is to lose.</a></h3>
+									<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Claritas est etiam processus.</p>
+								</div><!-- News -->
+							</div>
+						</div><!-- Latest News -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Latest News Section -->
+
+
+<section>
+	<div class="block">
+		<div data-velocity="-.2" style="background: url(images/resource/parallax3.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->				
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 column">
+					<div class="awards">
+						<h4>Awards and Memberships</h4>
+						<p itemprop="description">The origins of our Firm can be traced back to Robertson & Partners, a law firm in <br/> Washington, D.C., started </p>
+						<div class="awards-carousel">
+							<div class="award-box"><img itemprop="image" src="images/resource/awards1.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards2.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards3.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards1.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards2.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards3.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards1.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards2.png" alt="" /></div><!-- Award Box -->
+							<div class="award-box"><img itemprop="image" src="images/resource/awards3.png" alt="" /></div><!-- Award Box -->
+						</div><!-- Awards Carousel -->
+					</div><!-- Awards -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 column">
+					<div class="side-title">
+						<h2>SIGNUP FOR NEWSLETTER</h2>
+						<span>Maecenas bibendum </span>
+					</div>
+					<div class="newsletter-signup">
+						<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudiu lectorum. Claritas est etiam processus.</p>
+						<form class="contact-form">
+							<div class="row">
+								<div class="col-md-12"><input type="email" placeholder="Email" /></div>
+								<div class="col-md-12"><button class="theme-btn" type="submit">SEND TO LAWYER</button></div>
+							</div>
+						</form><!-- Contact Form -->
+						<div class="social-icons">
+							<a itemprop="url" href="#" title=""><i class="fa fa-facebook"></i></a>
+							<a itemprop="url" href="#" title=""><i class="fa fa-google-plus"></i></a>
+							<a itemprop="url" href="#" title=""><i class="fa fa-twitter"></i></a>
+							<a itemprop="url" href="#" title=""><i class="fa fa-pinterest"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 column">
+					<div class="side-title">
+						<h2>YOU SHOULD KNOW ABOUT LAW</h2>
+						<span>Maecenas bibendum </span>
+					</div>
+					<div class="video">
+						<div class="video-img">
+							<img itemprop="image" src="images/resource/video-thumb.jpg" alt="" />
+							<a itemprop="url" data-rel="prettyPhoto" href="http://vimeo.com/33123008" title=""><i class="fa fa-play-circle-o"></i></a>
+						</div>
+						<a itemprop="url" href="#" title="">Watch More <i class="fa fa-play-circle"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<div class="block blackish">
+		<div data-velocity="-.2" style="background: url(images/resource/parallax4.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->				
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div class="contact-info">
+						<h6>Lawyer Professional <br/> Professional Liability Insurance</h6>
+						<strong>T.898.938.987</strong>
+						<span>Simplenoe@email.com</span>
+						<p itemprop="description">144 high street holywood Bttb 9hs F.028 9042 5292</p>
+					</div><!-- Contact Info -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- Contact Information Section -->
+
+
+
+
+<footer>
+	<div class="block">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 column">
+					<div class="footer-widgets">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="widget">
+									<div class="widget-title">
+										<i class="fa fa-bullhorn"></i>
+										<h5>About</h5>
+									</div>
+									<div class="about-widget">
+										<strong>We Start From 1978</strong>
+										<p itemprop="description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Claritas est etiam processus. Claritas est etiam processus dynamicus, qui sequitur mutationem</p>
+										<span>T.898.938.987</span>
+										<a itemprop="url" class="theme-btn" href="about.html" title="">Know About History</a>
+									</div>
+								</div><!-- Widget -->
+							</div>
+							<div class="col-md-4">
+								<div class="widget">
+									<div class="widget-title">
+										<i class="fa fa-umbrella"></i>
+										<h5>News By Top Lawyers</h5>
+									</div>
+									<div class="post-widgets">
+										<div class="widget-post" itemscope itemtype="http://schema.org/BlogPosting">
+											<img itemprop="image" src="images/resource/widget-post1.jpg" alt="" />
+											<div class="widget-post-detail">
+												<span content="SEPTEMBER 23, 2013" itemprop="datePublished">SEPTEMBER 23, 2013</span>
+												<h6 itemprop="headline"><a itemprop="url" href="blog-single.html" title="">This is war, and in War The Only Crime is o lose.</a></h6>
+												<strong>POSTED IN: <a itemprop="url" href="#" title="">ADVICE</a><a itemprop="url" href="#" title="">LEGAL</a></strong>
+											</div>
+										</div><!-- Widget Post -->
+										<div class="widget-post" itemscope itemtype="http://schema.org/BlogPosting">
+											<img itemprop="image" src="images/resource/widget-post2.jpg" alt="" />
+											<div class="widget-post-detail">
+												<span content="SEPTEMBER 23, 2013" itemprop="datePublished">SEPTEMBER 23, 2013</span>
+												<h6 itemprop="headline"><a itemprop="url" href="blog-single.html" title="">This is war, and in War The Only Crime is o lose.</a></h6>
+												<strong>POSTED IN: <a itemprop="url" href="#" title="">ADVICE</a><a itemprop="url" href="#" title="">LEGAL</a></strong>
+											</div>
+										</div><!-- Widget Post -->
+									</div><!-- Post Widgets -->
+ 								</div><!-- Widget -->
+							</div>
+							<div class="col-md-4">
+								<div class="widget full-bg">
+									<div class="widget-title">
+										<i class="fa fa-twitter"></i>
+										<h5>Twitter Feeds</h5>
+									</div>
+									<div class="twitter-feeds">
+										<div class="tweet">
+											<span>About 1 Month Ago</span>
+											<p itemprop="description">Newsline - Joomla Magazine Layout <a itemprop="url" href="#" title="">http://t.co/QSrd7OtMLm</a> <a itemprop="url" href="#" title="">http://t.co/MAosFNi35q</a></p>
+										</div><!-- Tweet -->
+										<div class="tweet">
+											<span>About 1 Month Ago</span>
+											<p itemprop="description">Newsline - Joomla Magazine Layout <a itemprop="url" href="#" title="">http://t.co/QSrd7OtMLm</a> <a itemprop="url" href="#" title="">http://t.co/MAosFNi35q</a></p>
+										</div><!-- Tweet -->
+									</div><!-- Twitter Feeds -->
+								</div><!-- Widget -->
+							</div>
+						</div>
+					</div><!-- Footer Widgets -->
+				</div>
+			</div>
+		</div>
+	</div>
+</footer><!-- Footer -->
+<div class="experience-bar blackish">
+	<div data-velocity="-.2" style="background: url(images/resource/parallax4.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->				
+	<div class="container">
+		<div class="col-md-4 column">
+			<div class="experience-title">
+				<h5>10 Years Experienced Qualified</h5>
+			</div>
+		</div>
+		<div class="col-md-8 column">
+			<ul>
+				<li class="col-md-3">Education</li>
+				<li class="col-md-3">Child Custody</li>
+				<li class="col-md-3">Criminal Law</li>
+				<li class="col-md-3">Divorce</li>
+				<li class="col-md-3">Bankruptcy</li>
+				<li class="col-md-3">Civil Rights</li>
+				<li class="col-md-3">Consumer</li>
+				<li class="col-md-3">Discrimination</li>
+			</ul>
+		</div>
+	</div>
+</div><!-- Experience Bar -->
+<div class="bottom-bar">
+	<div class="container"><p itemprop="description">© 2014 LAWYER & ATTORNEY THEME | MADE BY WEBINANE</p></div>
+</div>
+</div><!-- Theme Layout -->
+
+
+
+
+	<!-- SCRIPTS-->
+	<script type="text/javascript" src="js/modernizr.custom.17475.js"></script>
+	<script src="js/jquery-2.1.3.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="js/jquery.scrolly.js"></script>	
+   	<script src="js/jquery.plugin.min.js"></script>	
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/isotope-initialize.js"></script>
+	<script src="js/enscroll-0.5.2.min.js"></script> <!-- Custom Scroll bar -->
+   	<script src="js/waypoints.js"></script>	
+	<!-- Scripts For Layer Slider  -->
+	<script src="layerslider/js/greensock.js" type="text/javascript"></script>
+	<script src="layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+	<script src="layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+    
+	<script>
+    jQuery(document).ready(function( $ ) {
+        /* ============ LAYER SLIDER ================*/
+		jQuery("#layerslider").layerSlider({
+			responsive: true,
+			responsiveUnder: 1280,
+			layersContainer: 1170,
+			skin: 'fullwidth',
+			hoverPrevNext: true,
+			skinsPath: 'layerslider/skins/'
+		});
+
+    	/*================== Count Up to =====================*/
+        $('.counter > strong').counterUp({
+            delay: 10,
+            time: 3000
+        });	
+
+
+        /* ============ Awards Carousel ================*/
+		$('.attornies').owlCarousel({
+			autoplay:true,
+			autoplayTimeout:2500,
+			smartSpeed:2000,
+			loop:true,
+			dots:false,
+			nav:true,
+			margin:30,
+			singleItem:true,
+			mouseDrag:true,
+			items:3,
+			autoHeight:true,
+			responsive:{
+				0:{items:1},
+				480:{items:1},
+				767:{items:2},
+				1000:{items:2},
+			}
+		});	 
+
+
+        /* ============ Awards Carousel ================*/
+		$('.awards-carousel').owlCarousel({
+			autoplay:true,
+			autoplayTimeout:2500,
+			smartSpeed:2000,
+			loop:true,
+			dots:true,
+			nav:false,
+			margin:30,
+			singleItem:true,
+			mouseDrag:true,
+			items:3,
+			autoHeight:true,
+			responsive:{
+				0:{items:1},
+				480:{items:2},
+				767:{items:2},
+				1000:{items:3},
+			}
+		});	 
+
+        /* ============ Testimonials Carousel ================*/
+		$('.testimonials-carousel').owlCarousel({
+			autoplay:true,
+			autoplayTimeout:2500,
+			smartSpeed:2000,
+			loop:true,
+			dots:false,
+			nav:true,
+			margin:0,
+			singleItem:true,
+			mouseDrag:true,
+			items:1,
+			autoHeight:true,
+			animateIn:"fadeIn",
+			animateOut:"fadeOut",
+		});
+
+		/*================== SCROLLBAR =====================*/
+		$('.menu-links').enscroll({
+		showOnHover: true,
+		verticalTrackClass: 'track3',
+		verticalHandleClass: 'handle3'
+		}); 
+
+	});	 
+	</script>	
+	<script src="js/script.js"></script> 
+</body>
